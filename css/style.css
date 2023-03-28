@@ -275,7 +275,7 @@ span.swiper-pagination-bullet-active{
 .producats .box-container .box .flex .qty{
     border: var(--border);
     width: 50px;
-    height: 30px;
+    height: 40px;
     padding: .5rem;
     border-radius: 5px;
 }
