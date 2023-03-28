@@ -179,6 +179,107 @@ span.swiper-pagination-bullet-active{
     text-transform: capitalize;
 }
 
+.producats .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 350px);
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.producats .box-container .box {
+    border: var(--border);
+    border-radius: 5px;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+}
+
+.producats .box-container .box img {
+   width: 100%;
+   height: 300px;
+   object-fit: cover;
+}
+
+.producats .box-container .box .fa-eye,
+.producats .box-container .box .fa-shopping-cart{
+    position: absolute;
+    top: .5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    line-height: 2.3rem;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    color: #345674;
+    font-size: 1.2rem;
+}
+.producats .box-container .box .fa-eye:hover,
+.producats .box-container .box .fa-shopping-cart:hover{
+    background-color: #345674;
+    color: #fff;
+}
+
+.producats .box-container .box .fa-shopping-cart{
+    left: -10rem;
+}
+
+.producats .box-container .box .fa-eye{
+    right: -10rem;
+}
+
+.producats .box-container .box:hover .fa-shopping-cart{
+    left: 0.5rem;
+}
+
+.producats .box-container .box:hover .fa-eye{
+    right: .5rem;
+}
+
+.producats .box-container .box .cat{
+    margin-left: 1rem;
+    font-size: 1rem;
+    color: #ccc;
+    text-transform: capitalize;
+}
+
+.producats .box-container .box .name{
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+    color: #2a9d8f;
+    font-weight: 800;
+}
+
+.producats .box-container .box .flex {
+    display: flex;
+    align-items: center;
+    margin-right: .5rem;
+    margin-left: .5rem;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-weight: 900;
+}
+
+.producats .box-container .box .flex .price span{
+    color: #b14530;
+    font-size: .9rem;
+}
+
+.producats .box-container .box .flex .price  {
+    color: #000;
+    font-size: 1.1rem;
+}
+
+.producats .box-container .box .flex .qty{
+    border: var(--border);
+    width: 50px;
+    height: 30px;
+    padding: .5rem;
+    border-radius: 5px;
+}
+
 @media (max-width:991px) {
 
     .header{
