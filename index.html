@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- file cdnjs css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- link swiper -->
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <title>Pizza || Home</title>
 </head>
 <body>
@@ -29,9 +31,61 @@
         </div>
         <i class="fas fa-solid fa-xmark" id="close"></i>
     </header>
+
+    <section class="hero">
+        <div class="swiper hero-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <div class="contact">
+                        <span>order online</span>
+                        <h3>delicious pizza</h3>
+                        <a href="components/menu.html" class="btn">see munes</a>
+                    </div>
+                    <div class="image">
+                        <img src="images/pexels-photo-1049626.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <div class="contact">
+                        <span>order online</span>
+                        <h3>chezzy hamburger</h3>
+                        <a href="components/menu.html" class="btn">see munes</a>
+                    </div>
+                    <div class="image">
+                        <img src="images/pexels-photo-1166120.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <div class="contact">
+                        <span>order online</span>
+                        <h3>rosted chichen</h3>
+                        <a href="components/menu.html" class="btn">see munes</a>
+                    </div>
+                    <div class="image">
+                        <img src="images/pexels-photo-365459.webp" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
     
 
     <!-- file js -->
     <script src="script/script.js"></script>
+    <!-- link swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".hero-slider", {
+            loop: true,
+            grabCursor: true,
+            effect: "flip",
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+          });
+    </script>
 </body>
 </html>
