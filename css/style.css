@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;margin: 0;
+    outline: none;border: none;
+    transition: all 0.3s linear;
+    text-decoration: none;
+}
+
+:root{
+    --white: #fff;
+    --light: #ccc;
+    --blue-dark: #345674;
+    --red-dark: #b14530;
+    --green-dark: #2a9d8f;
+    --border: 1px solid #ccc;
+}
+
+body{
+    background: #eee;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: .5rem 8%;
+    border-bottom:var(--border) ;
+    background-color: var(--white);
+}
+
+.header .logn {
+    color: #345674;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    font-size: 1.5rem;
+}
+
+.header .navber a{
+    color: var(--red-dark);
+    margin-right: 1rem;
+    font-weight: 500;
+}
+
+.header .navber a:hover{
+    color: var(--light);
+}
+
+.header .icons{
+    display: flex;
+    align-items: center;
+}
+
+.header .icons i {
+    margin-left: 1rem;
+    font-size: 1.3rem;
+    color: #345674;
+    cursor: pointer;
+}
+
+.header .icons i:hover{
+    color: #b14530;
+}
+
+#menu{
+    display: none;
+}
+
+#close{
+    display: none;
+}
+
+
+@media (max-width:991px) {
+
+    .header{
+        position: fixed;
+        bottom: 0; right: 0; left: 0;
+        border-top:var(--border);
+        z-index: 1000px;
+    }
+
+    .header .navber{
+        position: absolute;
+        top: -1162%;left: 0;
+        background: #fff;
+        height: 92vh;
+        width: 60%;
+        border-right: var(--border);
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+
+    }
+
+    .header .navber.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navber a{
+        display: block;
+        padding: 1rem 0;
+        margin: 2.5rem 0;
+    }
+
+    #menu{
+        display: block;
+    }
+
+    #close{
+        display: none;
+        position: absolute;
+        top: -1130%; right: 10.5rem;
+        border: var(--border);
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        transition: all 6s linear;
+    }
+}
