@@ -185,6 +185,7 @@ span.swiper-pagination-bullet-active{
     gap: 1rem;
     align-items: center;
     justify-content: center;
+    margin-bottom: 1rem;
 
 }
 
@@ -280,6 +281,87 @@ span.swiper-pagination-bullet-active{
     border-radius: 5px;
 }
 
+.all-view{
+    align-items: center;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 150px;
+    background: #345674;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.all-view:hover{
+    background: transparent;
+    color: #345674;
+    border: 1px solid #345674;
+}
+
+
+footer{
+    background: #fff;
+
+}
+
+.container-footer{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,350px);
+    gap: 2rem;
+
+}
+.box-footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.box-footer h3{
+    margin: 1rem 0;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #023047;
+}
+
+
+.box-footer a {
+    text-align: start;
+    margin-left: 7rem;
+    margin-bottom: .5rem;
+    color: #0f6bae;
+}
+
+.box-footer a:hover{
+    text-decoration: underline;
+}
+
+.box-footer i {
+    margin-right: 1rem;
+    color: #2839d6;
+}
+
+.copy{
+    text-align: center;
+    padding: .5rem;
+    border-top: 1px solid #ccc;
+}
+
+.copy h2{
+    font-size: 1.3rem;
+    color: #023047;
+}
+
+.copy span {
+    color: #0f6bae;
+}
+
 @media (max-width:991px) {
 
     .header{
@@ -354,6 +436,10 @@ span.swiper-pagination-bullet-active{
 
     .heading {
         font-size: 2rem;
+    }
+
+    .copy h2{
+        font-size: .8rem;
     }
     
 }
