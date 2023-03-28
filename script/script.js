@@ -5,11 +5,13 @@ menu.addEventListener("click",(eo) => {
     navbar.classList.add("active");
     close.style.display = "none";
     close.style.display = "flex";
+    menu.style.display = "none";
 })
 
 close.addEventListener("click",(eo) => {
     navbar.classList.remove("active");
     close.style.display = "none";
+    menu.style.display = "flex";
 })
 
 window.onscroll = () => {
