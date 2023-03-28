@@ -6,6 +6,7 @@
     outline: none;border: none;
     transition: all 0.3s linear;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 :root{
@@ -19,6 +20,15 @@
 
 body{
     background: #eee;
+}
+
+.heading {
+    text-align: center;
+    margin: 1rem 0;
+    color: #345674;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2.5rem;
 }
 
 .header{
@@ -138,6 +148,37 @@ span.swiper-pagination-bullet-active{
    background: var(--red-dark);
 }
 
+.gotagory .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.gotagory .container .box {
+    border-radius: 1px;
+    border: 2px solid #000;
+    padding: 1rem;
+}
+
+.gotagory .container .box:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.gotagory .container .box img {
+    height: 10rem;
+    display: flex;
+    margin: auto;
+}
+
+.gotagory .container .box h3 {
+    text-align: center;
+    margin-top: 1rem;
+    text-transform: capitalize;
+}
+
 @media (max-width:991px) {
 
     .header{
@@ -201,4 +242,17 @@ span.swiper-pagination-bullet-active{
         display: flex;
         margin:2rem auto;
     }
+
+    .gotagory .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 350px);
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+    
 }
