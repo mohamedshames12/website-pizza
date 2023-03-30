@@ -17,17 +17,22 @@ close.addEventListener("click",(eo) => {
 window.onscroll = () => {
     navbar.classList.remove("active");
     close.style.display = "none";
-    yourCarts.classList.remove("active");
 }
 
-let carts = document.getElementById("carts");
-let yourCarts = document.querySelector('.your-carts');
-let closeCart = document.querySelector('#close-cart');
-carts.addEventListener("click", (eo) => {
-    yourCarts.classList.add("active");
-})
+const user = document.getElementById("user");
+const infoUser = document.querySelector(".info-user");
 
-closeCart.addEventListener("click", (eo) => {
-    yourCarts.classList.remove("active");
-})
+user.addEventListener("click", () => {
+    infoUser.classList.toggle("active");
+}
+)
 
+function loader(){
+    document.querySelector('.loader').style.display = "none";
+}
+
+function fadeOut(){
+    setInterval(loader, 3000);
+}
+
+window.onload = fadeOut;

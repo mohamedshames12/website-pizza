@@ -81,6 +81,66 @@ body{
     color: #b14530;
 }
 
+.user{
+    position: relative;
+}
+
+.info-user{
+    position: absolute;
+    width: 250px;
+    background: #fff;
+    right: 0;
+    padding: 1rem;
+    top: 2.5rem;
+    border-radius: 5px;
+    border: var(--border);
+    z-index: 20000;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.info-user.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.info-user .box .name-user {
+    text-align: center;
+    text-transform: capitalize;
+    color: #023047;
+    margin-bottom: 1rem;
+}
+
+.info-user .box .profile,
+.info-user .box .logout{
+    background: #345674;
+    padding: 0.3rem 1.3rem;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.info-user .box .profile:hover{
+    background: #2839d6;
+}
+
+.info-user .box .logout{
+    background: #b14530;
+}
+
+.info-user .box .logout:hover{
+    background: #f32800;
+}
+
+.info-user .box .lo-re{
+    margin-top: .7rem;
+}
+
+.info-user .box .lo-re a {
+    color: #023047;
+}
+
+.info-user .box .lo-re a:hover{
+    text-decoration: underline;
+}
+
 /* your carts */
 
 
@@ -877,6 +937,159 @@ textarea{
     color: #b14530;
 }
 
+/* register %% login */
+
+.container-re-lo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.container-re-lo .box{
+    display: flex;
+    flex-direction: column;
+    border: var(--border);
+    padding: 1rem;
+    width: 360px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.container-re-lo .box h1{
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    color: #023047;
+}
+
+.container-re-lo .box .input {
+    width: 100%;
+    margin-bottom: 1rem;
+    border: 1px solid #000;
+    height: 40px;
+    border-radius: 3px;
+    padding: 0 .5rem;
+    transition: all .2s ease-in-out;
+}
+
+.container-re-lo .box .input:focus{
+    border: 2px solid #000;
+}
+
+.container-re-lo .box .input::placeholder{
+    color: #a5a5a5;
+}
+
+.container-re-lo .box .input:focus::placeholder{
+    color: #656565;
+    font-weight: 700;
+}
+
+.container-re-lo .box .btn{
+    width: 200px;
+    height: 35px;
+    margin: auto;
+    background: #345674;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.container-re-lo .box .btn:hover{
+    background: #023047;
+}
+.container-re-lo .box p {
+    text-align: center;
+    font-size: .9rem;
+    color: #656565;
+}
+
+.container-re-lo .box a {
+    font-size: .8rem;
+    color: #023047;font-weight: 600;
+}
+
+.container-re-lo .box a:hover{
+    text-decoration: underline;
+}
+
+/* profile */
+
+.user-details{
+    width: 390px;
+    margin: auto;
+}
+
+
+
+.user-details .user {
+    width: 370px;
+    border: var(--border);
+    background: #fff;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.user-details .user img {
+    height: 10rem;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+.user-details .user p {
+    color: #656565;
+    margin-bottom: .5rem;
+}
+
+.user-details .user span {
+    margin-left: .5rem;
+}
+
+.user-details .user a {
+    background-color: #023047;
+    padding: 0.3rem 1.4rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.user-details .user a:hover{
+    background-color: #0f6bae;
+}
+
+.loader{
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom:  0;
+    z-index: 100000000000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader img {
+    height: 25rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width:991px) {
 
     .header{
@@ -1009,10 +1222,17 @@ textarea{
         height: 100vh;
         width: 100%;
         border-right: var(--border);
-    
         overflow: hidden;
         z-index: 1000;
     }
-    
+
+    .info-user{
+        position: absolute;
+        width: 250px;
+        background: #fff;
+        right: -5rem;
+        padding: 1rem;
+        top: -9.2rem;
+    }
 
 }

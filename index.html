@@ -26,7 +26,19 @@
         <div class="icons">
             <i class="fas fa-solid fa-bars" id="menu"></i>
             <a href="components/search.html"><i class="fas fa-regular fa-magnifying-glass"></i></a>
-            <i class="fas fa-thin fa-user" id="user"></i>
+            <div class="user">
+                <i class="fas fa-thin fa-user" id="user"></i>
+                <div class="info-user">
+                    <div class="box">
+                        <p class="name-user">mohamed shams</p>
+                        <a href="components/profile.html" class="profile">profile</a>
+                        <a href="auth/logout.html" class="logout">logout</a>
+                        <div class="lo-re">
+                            <a href="auth/login.html">login</a> <span>or</span> <a href="auth/register.html">register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="cart"><i class="fas fa-light fa-cart-shopping" id="carts"><span>(4)</span></i>
                 <div class="your-carts">
                     <h1>your Cart</h1>
@@ -267,7 +279,7 @@
             </div>
             <div class="box-footer">
                 <h3>extra links</h3>
-                    <a href="auth/logn.html"><i class="fa-solid fa-chevron-right"></i> login</a>
+                    <a href="auth/login.html"><i class="fa-solid fa-chevron-right"></i> login</a>
                     <a href="auth/register.html"><i class="fa-solid fa-chevron-right"></i> Register</a>
                     <a href="components/orders.html"><i class="fa-solid fa-chevron-right"></i> Orders</a>
                     <a href="components/search.html"><i class="fa-solid fa-chevron-right"></i> Search</a>
@@ -281,6 +293,10 @@
             </div>
         </div>
     </footer>
+
+    <div class="loader">
+        <img src="images/loader.gif" alt="">
+    </div>
 
     <div class="copy">
         <h2>© copyright @2023 by <span>MR.Mohamed Shams</span> | all rights reserved</h2>
@@ -302,6 +318,8 @@
     </script>
     <!-- file js -->
     <script src="script/script.js"></script>
+    <script src="../script/cart.js"></script>
+
 
 </body>
 </html>
