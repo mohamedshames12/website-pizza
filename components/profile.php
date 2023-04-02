@@ -1,3 +1,15 @@
+<?php
+    include "../config/connect.php";
+    session_start();
+  
+    if(isset($_SESSION["user_id"])){
+        $user_id = $_SESSION["user_id"];
+    }else{
+        $user_id = '';
+        header("location:../auth/login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,34 +31,20 @@
     <title>Pizza || profile</title>
   </head>
   <body>
-    <header class="header">
-      <a href="../index.html" class="logn">Pizza</a>
-      <nav class="navber">
-        <a href="../index.html">Home</a>
-        <a href="bout.html">About</a>
-        <a href="menu.html">Menu</a>
-        <a href="orders.html">Orders</a>
-        <a href="content.html">Content</a>
-      </nav>
-      <div class="icons">
-        <i class="fas fa-solid fa-bars" id="menu"></i>
-        <a href="../components/search.html"><i class="fas fa-regular fa-magnifying-glass"></i></a>
-        <i class="fas fa-thin fa-user" id="user"></i>
-      </div>
-      <i class="fas fa-solid fa-xmark" id="close"></i>
-    </header>
+
+  <?php include 'Header.php'; ?>
 
     <section class="user-details">
         <h1 class="heading">your profile</h1>
         <div class="user">
             <img src="../icons/user.png" alt="">
-            <p><i class="fas fa-user"></i><span>Mohamed Shams</span></p>
-            <p><i class="fas fa-phone"></i><span>+201061242066</span></p>
-            <p><i class="fas fa-envelope"></i><span>Mohamed_Shams@gmail.com</span></p>
-            <a href="update_profile.html" class="btn">update info</a>
+            <p><i class="fas fa-user"></i><span><?= $fetch_profile['name']?></span></p>
+            <p><i class="fas fa-phone"></i><span><?= $fetch_profile['phone']?></span></p>
+            <p><i class="fas fa-envelope"></i><span><?= $fetch_profile['email']?></span></p>
+            <a href="update_profile.php" class="btn">update info</a>
             <h3 class="delivery">delivery address</h3>
-            <p class="address"><i class="fas fa-map-marker-alt"></i> <span>Cairo - Nasr City</span></p>
-            <a href="update_addres.html" class="btn">update address</a>
+            <p class="address"><i class="fas fa-map-marker-alt"></i> <?php if($fetch_profile['address'] == ''){echo 'please enter your addres!';}else{echo $fetch_profile['address']; }?></p>
+            <a href="update_addres.php" class="btn">update address</a>
         </div>
     </section>
 
@@ -54,29 +52,29 @@
       <div class="container-footer">
         <div class="box-footer">
           <h3>quich links</h3>
-          <a href="../index.html"
+          <a href="../index.php"
             ><i class="fa-solid fa-chevron-right"></i> Home</a
           >
-          <a href="about.html"
+          <a href="about.php"
             ><i class="fa-solid fa-chevron-right"></i> About</a
           >
-          <a href="cart.html"><i class="fa-solid fa-chevron-right"></i> Cart</a>
-          <a href="contact.html"
+          <a href="cart.php"><i class="fa-solid fa-chevron-right"></i> Cart</a>
+          <a href="contact.php"
             ><i class="fa-solid fa-chevron-right"></i>Contact Us</a
           >
         </div>
         <div class="box-footer">
           <h3>extra links</h3>
-          <a href="login.html"
+          <a href="login.php"
             ><i class="fa-solid fa-chevron-right"></i> login</a
           >
-          <a href="register.html"
+          <a href="register.php"
             ><i class="fa-solid fa-chevron-right"></i> Register</a
           >
-          <a href="../components/orders.html"
+          <a href="../components/orders.php"
             ><i class="fa-solid fa-chevron-right"></i> Orders</a
           >
-          <a href="../components/search.html"
+          <a href="../components/search.php"
             ><i class="fa-solid fa-chevron-right"></i> Search</a
           >
         </div>

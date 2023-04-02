@@ -186,6 +186,7 @@ body{
 .icons .cart .your-carts .box .contact .name{
     font-size: .9rem;
     margin-bottom: .5rem;
+    margin-right: 2rem;
     color: #023047;
     font-weight: 800;
 }
@@ -198,42 +199,12 @@ body{
     margin-bottom: .3rem;
 }
 
-.icons .cart .your-carts .box .btns {
-    display: flex;
-}
-
-.icons .cart .your-carts .box .btns button{
-    width: 25px;
-    height: 25px;
-    align-items: center;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    border-radius: 50%;
-    background: #345674;
+.your-carts .tract button{
+    background: #b14530;
+    padding: 0.4rem .7rem;
+    border-radius: 5px;
     color: #fff;
     cursor: pointer;
-}
-
-.icons .cart .your-carts .box .btns button:hover{
-    background: #2839d6;
-}
-
-.icons .cart .your-carts .box .btns p {
-    font-size: 0.9rem;
-}
-
-.icons .cart .your-carts .box .trach{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column-reverse;    
-}
-
-.icons .cart .your-carts .box .trach i {
-    color: #b14530;
-}
-
-.icons .cart .your-carts .box .trach i:hover{
-    color: #f32800;
 }
 
 .line{
@@ -400,7 +371,8 @@ span.swiper-pagination-bullet-active{
 }
 
 .producats .box-container .box .fa-eye,
-.producats .box-container .box .fa-shopping-cart{
+.producats .box-container .box .fa-shopping-cart,
+.producats .box-container .box .fa-times{
     position: absolute;
     top: .5rem;
     height: 2.5rem;
@@ -413,12 +385,14 @@ span.swiper-pagination-bullet-active{
     font-size: 1.2rem;
 }
 .producats .box-container .box .fa-eye:hover,
-.producats .box-container .box .fa-shopping-cart:hover{
+.producats .box-container .box .fa-shopping-cart:hover,
+.producats .box-container .box .fa-times:hover{
     background-color: #345674;
     color: #fff;
 }
 
-.producats .box-container .box .fa-shopping-cart{
+.producats .box-container .box .fa-shopping-cart,
+.producats .box-container .box .fa-times{
     left: -10rem;
 }
 
@@ -426,13 +400,34 @@ span.swiper-pagination-bullet-active{
     right: -10rem;
 }
 
-.producats .box-container .box:hover .fa-shopping-cart{
+.producats .box-container .box:hover .fa-shopping-cart,
+.producats .box-container .box:hover .fa-times{
     left: 0.5rem;
 }
 
 .producats .box-container .box:hover .fa-eye{
     right: .5rem;
 }
+
+.box-container .box .fa-eye{
+    display: flex;
+    align-items: center;
+    background: #eee;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+}
+
+.producats .box-container .box .fa-times{
+    background: #b14530;
+    color: #fff;
+}
+
+.producats .box-container .box .fa-times:hover{
+    background: #ff2a00;
+    color: #dbdbdb;
+}
+
 
 .producats .box-container .box .cat{
     margin-left: 1rem;
@@ -459,6 +454,41 @@ span.swiper-pagination-bullet-active{
     font-weight: 900;
 }
 
+.producats .box-container .box .flex-end{
+    display: flex;
+    align-items: stretch;
+    justify-items: center;
+    align-content: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.producats .box-container .box .flex-end div .fa-edit{
+    padding: .74rem 1rem;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.sub-total{
+    margin: .5rem;
+}
+
+.sub-total span{
+    color: #b14530;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.disabled{
+    user-select: none;
+    opacity: .5;
+    pointer-events: none;
+}
+
+
 .producats .box-container .box .flex .price span{
     color: #b14530;
     font-size: .9rem;
@@ -475,6 +505,30 @@ span.swiper-pagination-bullet-active{
     height: 40px;
     padding: .5rem;
     border-radius: 5px;
+}
+
+.producats .box-container .box .btns button{
+    width: 170px;
+    height: 33px;
+    background-color: #023047;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.producats .box-container .box .btns button:hover{
+    background: #2839d6;
+}
+
+.producats .box-container .box .btns i {
+    margin-right: 1rem;
 }
 
 .all-view{
@@ -691,7 +745,7 @@ textarea{
 
 /* search */
 
-.search{
+.search .box{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -824,6 +878,7 @@ textarea{
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+    margin-bottom: 1rem;
 }
 
 .producats .btn:hover{
@@ -861,7 +916,8 @@ textarea{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #dbdbdb;
+    color: #023047;
+    margin-bottom: 1rem;
 }
 
 .checkout form .cart-item .grand-total{
@@ -915,7 +971,7 @@ textarea{
 }
 
 .container-orders{
-    width: 350px;
+    width: 370px;
     margin: auto;
     border: var(--border);
     padding: 1rem;
@@ -950,8 +1006,8 @@ textarea{
     display: flex;
     flex-direction: column;
     border: var(--border);
-    padding: 1rem;
-    width: 360px;
+    padding: 2rem;
+    width: 370px;
     border-radius: 5px;
     background: #fff;
 }
@@ -1076,7 +1132,15 @@ textarea{
     height: 25rem;
 }
 
-
+.empty{
+    text-align: center;
+    border: 1px solid #000;
+    padding: 0.4rem;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #b14530;
+    text-transform: capitalize;
+}
 
 
 
@@ -1194,7 +1258,7 @@ textarea{
     .container-about .box .contact p {
         letter-spacing: normal;
         text-align: center;
-        margin-bottom: 1rem;
+       
     }
 
     .container-contact .box {

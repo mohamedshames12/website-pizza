@@ -1,3 +1,13 @@
+<?php
+    include "../config/connect.php";
+    session_start();
+  
+    if(isset($_SESSION["user_id"])){
+        $user_id = $_SESSION["user_id"];
+    }else{
+        $user_id = '';
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,107 +29,10 @@
     <title>Pizza || About</title>
   </head>
   <body>
-    <header class="header">
-      <a href="../index.html" class="logn">Pizza</a>
-      <nav class="navber">
-        <a href="../index.html">Home</a>
-        <a href="bout.html">About</a>
-        <a href="menu.html">Menu</a>
-        <a href="orders.html">Orders</a>
-        <a href="content.html">Content</a>
-      </nav>
-      <div class="icons">
-        <i class="fas fa-solid fa-bars" id="menu"></i>
-        <a href="search.html"><i class="fas fa-regular fa-magnifying-glass"></i></a>
-        <i class="fas fa-thin fa-user" id="user"></i>
-        <div class="cart">
-          <i class="fas fa-light fa-cart-shopping" id="carts"><span>(4)</span></i>
-          <div class="your-carts">
-            <h1>your Cart</h1>
-            <form action="#" method="post" class="box">
-                <div class="image">
-                    <img src="../images/cart2.jpg" alt="">
-                </div>
-                <div class="contact">
-                    <p class="name">Kickers Pizza BBQ Sauce</p>
-                    <p class="price">$7</p>
-                    <div class="btns">
-                        <button>+</button>
-                        <p>1</p>
-                        <button>-</button>
-                    </div>
-                </div>
-                <div class="trach">
-                    <i class="fas fa-regular fa-trash"></i>
-                </div>
-            </form>
-            <div class="line"></div>
-            <form action="#" method="post" class="box">
-                <div class="image">
-                    <img src="../images/cart4.jpg" alt="">
-                </div>
-                <div class="contact">
-                    <p class="name">Chicken Legend Hot</p>
-                    <p class="price">$10</p>
-                    <div class="btns">
-                        <button>+</button>
-                        <p>1</p>
-                        <button>-</button>
-                    </div>
-                </div>
-                <div class="trach">
-                    <i class="fas fa-regular fa-trash"></i>
-                </div>
-            </form>
-            <div class="line"></div>
-            <form action="#" method="post" class="box">
-                <div class="image">
-                    <img src="../images/cart3.jpg" alt="">
-                </div>
-                <div class="contact">
-                    <p class="name">Chicken Legend Ranch</p>
-                    <p class="price">$9</p>
-                    <div class="btns">
-                        <button>+</button>
-                        <p>1</p>
-                        <button>-</button>
-                    </div>
-                </div>
-                <div class="trach">
-                    <i class="fas fa-regular fa-trash"></i>
-                </div>
-            </form>
-            <div class="line"></div>
-            <form action="#" method="post" class="box">
-                <div class="image">
-                    <img src="../images/cart3.jpg" alt="">
-                </div>
-                <div class="contact">
-                    <p class="name">Philly Cheese Steak</p>
-                    <p class="price">$30</p>
-                    <div class="btns">
-                        <button>+</button>
-                        <p>1</p>
-                        <button>-</button>
-                    </div>
-                </div>
-                <div class="trach">
-                    <i class="fas fa-regular fa-trash"></i>
-                </div>
-            </form>
-            <div class="line"></div>
-            <div class="total">
-                <p class="items">items</p>
-                <p class="prices">$56</p>
-            </div>
-            <a href="cart.html" class="btn">see your cart</a>
-            <i class="fs fa-solid fa-xmark" id="close-cart"></i>
-        </div>
-        </div>
-      </div>
-      <i class="fas fa-solid fa-xmark" id="close"></i>
-    </header>
 
+  <?php include 'Header.php'; ?>
+
+  
     <section class="about">
       <h1 class="heading">about us</h1>
       <div class="container-about">
@@ -187,7 +100,7 @@
           </div>
         </div>
       </div>
-      <a href="../components/menu.html" class="all-view">our menu</a>
+      <a href="../components/menu.php" class="all-view">our menu</a>
     </section>
 
     <section class="simpel">
@@ -215,29 +128,29 @@
       <div class="container-footer">
         <div class="box-footer">
           <h3>quich links</h3>
-          <a href="../index.html"
+          <a href="../index.php"
             ><i class="fa-solid fa-chevron-right"></i> Home</a
           >
-          <a href="about.html"
+          <a href="about.php"
             ><i class="fa-solid fa-chevron-right"></i> About</a
           >
-          <a href="cart.html"><i class="fa-solid fa-chevron-right"></i> Cart</a>
-          <a href="contact.html"
+          <a href="cart.php"><i class="fa-solid fa-chevron-right"></i> Cart</a>
+          <a href="contact.php"
             ><i class="fa-solid fa-chevron-right"></i>Contact Us</a
           >
         </div>
         <div class="box-footer">
           <h3>extra links</h3>
-          <a href="../auth/login.html"
+          <a href="../auth/login.php"
             ><i class="fa-solid fa-chevron-right"></i> login</a
           >
-          <a href="../auth/register.html"
+          <a href="../auth/register.php"
             ><i class="fa-solid fa-chevron-right"></i> Register</a
           >
-          <a href="orders.html"
+          <a href="orders.php"
             ><i class="fa-solid fa-chevron-right"></i> Orders</a
           >
-          <a href="search.html"
+          <a href="search.php"
             ><i class="fa-solid fa-chevron-right"></i> Search</a
           >
         </div>
